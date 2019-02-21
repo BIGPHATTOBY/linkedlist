@@ -16,10 +16,10 @@ package main
 
 import(
   "fmt"
-  "github.com/bigphattoby/linkedlist"
+  ll "github.com/bigphattoby/linkedlist"
 )
 func main() {
-  ll := NewLinkedList()
+  ll := ll.NewLinkedList()
   ll.Append("foo")
   ll.Append("bar")
   ll.Append("cowsay")
