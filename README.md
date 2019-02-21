@@ -1,4 +1,4 @@
-#LinkedList
+# LinkedList
 This repo implements a linked-list and a few functions to manipulate it with.
 
 ### Functions:
@@ -12,6 +12,8 @@ This repo implements a linked-list and a few functions to manipulate it with.
 
 ## Example:
 ```GO
+package main
+
 import(
   "fmt"
   "github.com/bigphattoby/linkedlist"
@@ -24,7 +26,7 @@ func main() {
   ll.Append("cowsay")
   ll.Delete(3)
   s, err := ll.PrintAll
-  if err =! nil {
+  if err != nil {
     fmt.Println(err)
   }
   for _, list := range s {
