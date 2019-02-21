@@ -22,10 +22,9 @@ func main() {
   ll := NewLinkedList()
   ll.Append("foo")
   ll.Append("bar")
-  ll.Insert("baz", 1)
   ll.Append("cowsay")
-  ll.Delete(3)
-  s, err := ll.PrintAll
+  ll.Delete(2)
+  s, err := ll.PrintAll()
   if err != nil {
     fmt.Println(err)
   }
