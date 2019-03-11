@@ -48,11 +48,11 @@ func TestGetValueByIndex(t *testing.T) {
 	ll.Append("foo")
 	ll.Append("bar")
 	ll.Append("baz")
-	s, _ := ll.GetValueByIndex(1)
+	s, _ := ll.GetValueByIndex(2)
 	if s != "bar" {
 		t.Error("Expected bar, got ", s)
 	}
-	s, _ = ll.GetValueByIndex(2)
+	s, _ = ll.GetValueByIndex(3)
 	if s != "baz" {
 		t.Error("Expected baz, got ", s)
 	}

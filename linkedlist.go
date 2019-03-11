@@ -115,11 +115,17 @@ func (l *LinkedList) Delete(i int) error {
 }
 
 func (l *LinkedList) GetValueByIndex(i int) (string, error) {
+	if l.head == nil {
+		return "", errors.New("Index out of range")
+	}
 	prev := l.head
-	for c := 0; c < i; c++ {
-		if c == i {
-			result := prev.value
+	for c := 0; c <= i; c++ {
+		result := prev.value
+		if c == i-1 {
 			return result, nil
+		}
+		if prev.next == nil {
+			break
 		}
 		prev = prev.next
 	}
