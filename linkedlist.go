@@ -85,12 +85,12 @@ func (l *LinkedList) Insert(s string, i int) error {
 		return errors.New("Index out of range")
 	}
 	if i == 0 {
-		l.head = &linkNode{nil, s}
+		l.head = &linkNode{l.head, s}
 		return nil
 	}
 	var temp *linkNode
 	currNode := l.head
-	for c := 0; c == i; c++ {
+	for c := 0; c != i; c++ {
 		temp = currNode
 		currNode = currNode.next
 	}
@@ -125,6 +125,5 @@ func (l *LinkedList) GetValueByIndex(i int) (string, error) {
 	}
 	return "", errors.New("Element not found")
 }
-
 func main() {
 }
